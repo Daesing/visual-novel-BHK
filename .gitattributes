@@ -1,2 +1,22 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Ren'Py 자동 컴파일 바이트코드 및 캐시 (자주 충돌남)
+*.rpyc
+*.rpymc
+*.rpyb
+**/.rpyc
+
+# 저장 데이터 및 세이브 파일
+saves/
+game/saves/
+**/*_save/
+
+# 빌드 및 로그 파일
+errors.txt
+traceback.txt
+log.txt
+*.log
+
+# OS 및 에디터 임시 파일
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
