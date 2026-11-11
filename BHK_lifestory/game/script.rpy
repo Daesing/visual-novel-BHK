@@ -8,7 +8,7 @@ label start:
     scene black with fade
 
     # 1. 오프닝
-    call scene_opening
+    #call scene_opening
 
     # 2. 1장: 삼육초와 중학교의 방황
     call scene_chapter_01
