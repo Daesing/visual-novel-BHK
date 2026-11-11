@@ -38,6 +38,9 @@ define judge = Character("판사", color="#2c3e50", callback=play_typing_sound)
 define lim_teacher = Character("임 선생", color="#27ae60", callback=play_typing_sound)
 define bad_kid_1 = Character("교육생 A", color="#7f8c8d", callback=play_typing_sound)
 define bad_kid_2 = Character("교육생 B", color="#95a5a6", callback=play_typing_sound)
+# 체육부장 선배
+define pe_head = Character("체육부장", color="#e67e22", callback=play_typing_sound)
+define nvl_sys = Character(None, kind=nvl)
 
 # 전역 상태 변수
 default stat_determination = 0     # 독기 / 멘탈 스탯

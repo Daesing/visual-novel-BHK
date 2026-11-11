@@ -2,28 +2,36 @@ label scene_chapter_02:
   
     # 5. 끝나지 않은 악몽: 자전거 주인의 고소와 법원 소환장
     # ==============================================================================
+    play music "bgm_sad.mp3" fadein 1.0
     scene bg room_night with fade
     window hide
-
+    
     # 전화벨 소리
     play sound "audio/phone_ring.mp3"
     $ renpy.pause(2.0)
     
     sys "불과 며칠 뒤, 다시 울린 경찰서의 전화."
     stop sound fadeout 0.5  # 전화벨 효과음 종료
+    cop "병연 학생, 나 이 순경인데. 통화 괜찮아요?"
+    cop "하…… 다름이 아니고, 그 자전거 주인분 말이에요."
+    cop "학생 나이도 어리고 초범이라 우리가 중간에서 선처 쪽으로 설득을 좀 해봤는데…… 주인이 완강하네. 화가 아주 많이 났어요."
+    cop "방금 고소장 정식으로 접수됐고, 사건 소년부 송치 절차 들어갑니다. 아버님 옆에 계시면 전화 좀 바꿔줄래요?"
+
     sys "자전거의 원래 주인은 어린 학생이라고 봐줄 생각이 추호도 없었다."
     sys "합의는 결렬되었고, 정식 '고소'가 접수되었으니\n다음 주에 춘천경찰서 상급 지부로 출석하라는 싸늘한 통보였다."
-
 
     sys "아버지는 어떻게든 어린 자식의 등에 빨간 줄이 그어지는 것만은 막기 위해\n피해자를 찾아가 고개를 숙이고 백방으로 선처를 구하셨다."
     sys "하지만 그 눈물겨운 노력도 차가운 법의 시스템 앞에서는 역부족이었다."
 
+    stop music fadeout 1.0
+
     # 우편물 날아드는 연출
     scene black with Dissolve(0.5)
-    $ renpy.pause(0.5)
+    $ renpy.pause(1.0)
 
+    play sound "boom.mp3"
     scene bg court_summon with Dissolve(0.8)
-
+    $ renpy.pause(0.5)
     sys "얼마 지나지 않아 집으로 날아든 하얀 우편 봉투 하나."
     sys "‘피고인 김병연.’\n춘천지방법원 소년재판정에 출석하라는 정식 법원 공문이었다."
 
@@ -32,7 +40,6 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg outside_court with fade
     sys "2주 뒤, 춘천지방법원 소년재판소."
-    sys "우연인가 내가 재판소를 가던 그 날 춘천에서 첫 눈이 내리던 날"
     sys "작년까지만 해도 엘리트로 살던 내가 이 곳을 오게 될 줄은 꿈에도 몰랐다"
     # play music "audio/court_ambient.ogg" fadein 2.0
 
@@ -41,9 +48,8 @@ label scene_chapter_02:
     sys "차가운 공기, 양측 소송대리인의 딱딱하고 메마른 변론이 오가는 동안\n나는 고개를 처박은 채 내 숨소리조차 제대로 내지 못했다."
     # 판사의 발언
     # play sound "audio/gavel_bang.ogg"
-    # with sshake # 화면 흔들림 연출
-    judge "……피고인."
-
+    judge "피고인!!!"
+    with vpunch # 화면 흔들림 연출
     sys "높다란 판사석에서 내려다보는 차가운 시선이 정수리에 내리꽂혔다."
 
     judge "아무리 나이가 어린 학생이라도,{w=0.3} 남의 피땀 어린 재물에 손을 대는 것은\n절대로 용납될 수 없는 명백한 범죄입니다."
@@ -125,11 +131,6 @@ label scene_chapter_02:
 
     sys "그 지옥 같은 강의실 구석에서 싹튼 오기와 결핍은\n내 안의 나약함을 모조리 태워버리는 강력한 불꽃이 되었다."
 
-    scene bg highschool_gate with fade
-    window hide
-
-    sys "그렇게 이를 악물고 펜을 잡았던 중학교 3학년의 끝자락을 지나——"
-    sys "새로운 출발선, '성수고등학교'의 교문이 눈앞에 나타났다."
 
     # 2장 종료 후 3장 성수고 파트로 점프
     return
