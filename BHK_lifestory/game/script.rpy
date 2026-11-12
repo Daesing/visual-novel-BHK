@@ -8,10 +8,10 @@ label start:
     scene black with fade
 
     # 1. 오프닝
-    #all scene_opening
+    call scene_opening
 
     # 2. 1장: 삼육초와 중학교의 방황
-    #call scene_chapter_01
+    call scene_chapter_01
 
     # 3. 2장: 고교 진학, 멘헤라 연애, 나락
     #call scene_chapter_02

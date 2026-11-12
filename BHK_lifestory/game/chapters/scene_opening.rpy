@@ -2,8 +2,6 @@ label scene_opening:
     # ---------------------------------------------------------
     # 1. COLD OPEN: 강당 선거 단상 (시끄럽고 혼란스러운 현장)
     # ---------------------------------------------------------
-    
-    #play sound "audio/crowd_cheer.ogg" loop # 강당 웅성거림과 환호성
     window hide
 
     scene black with fade
@@ -38,24 +36,5 @@ label scene_opening:
     sys "이제부터 시작하는 이야기는 지금의 내가 되기까지의 이야기다."
 
     stop music fadeout 1.0
-    # ---------------------------------------------------------
-    # 3. 2002년 춘천 병실로 회귀
-    # ---------------------------------------------------------
-    $ renpy.pause(1.2)
-    play music "audio/opening_theme.ogg" fadein 2.5
-
-    scene bg hospital with fade
-    window hide
-
-    sys "2002년 9월 13일 춘천 모 병원 병실"
-
-    $ renpy.pause(1.0)
-
-    sys "부모님이 춘천 바닥에서 땀 흘려 일궈낸 작은 자영업의 터전 위에서,\n나는 지극히 평범하고 무탈하게 첫 울음을 터뜨렸다."
-    sys "남부럽지 않았다. 어릴 적의 나는 먹고 싶은 건 먹었고, 떼쓰는 족족 손에 쥘 수 있었다."
-    sys "적어도 그때까지는 몰랐다.\n내 인생이 낭떠러지 위를 걷는 곡예가 될 줄은."
-
-    # 씬 정리 후 script.rpy의 다음 줄(scene_chapter_01)로 복귀
-    $ renpy.pause(1.0)
 
     return
