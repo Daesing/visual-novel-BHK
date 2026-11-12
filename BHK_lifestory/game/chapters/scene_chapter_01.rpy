@@ -22,7 +22,6 @@ label scene_chapter_01:
     window hide
 
     sys "춘천 삼육초등학교."
-    sys "우리 집은 춘천이 아니였지만 아버지의 사업으로 춘천에 있는 학교를 다니게 되었다."
     sys "도내 유일의 사립 명문초라는 간판 아래,\n등굣길 교문 앞은 매일 아침 외제차와 정장 입은 학부모들로 붐볐다."
     sys "의사, 대학교수, 지역 유지들의 자제들 틈바구니에서\n자영업을 하시는 부모님의 헌신 덕에 나 역시 그들과 어깨를 나란히 할 수 있었다."
 
@@ -78,11 +77,11 @@ label scene_chapter_01:
     show chunho normal at center with dissolve
     ch "야, 멍때리지 말고 매점 가자. 빵 산다."
     me "……귀찮게 진짜."
+    hide chunho normal with dissolve
+    $ renpy.pause(1.0)
 
     sys "눈치 같은 건 개나 줘버린 넉살과 선을 아슬아슬하게 넘나드는 천호 덕분에,\n나는 태어나 처음으로 교실 안에서 숨통이 트이는 기분을 맛보았다."
-    hide chunho with dissolve
-    $ renpy.pause(1.5)
-
+    
     # ==============================================================================
     # 2. PC방의 쾌락과 타락 (나쁜 무리와의 접촉)
     # ==============================================================================
@@ -159,7 +158,7 @@ label scene_chapter_01:
     $ renpy.pause(1.0)
     scene bg police_call with dissolve
 
-    sys "요란하게 울리는 휴대폰 화면.\n발신자는 춘천경찰서였다."
+    sys "요란하게 울리는 휴대폰 화면.\n발신자는 알 수 없는 번호였다."
     stop sound fadeout 0.5
     stop music fadeout 1.0
 
@@ -242,6 +241,8 @@ label scene_chapter_01:
     
     sys "불과 며칠 뒤, 다시 울린 경찰서의 전화."
     stop sound fadeout 0.5  # 전화벨 효과음 종료
+    play sound "audio/phone_pickup.mp3"
+    $ renpy.pause(1.0)
     cop "병연 학생, 나 이 순경인데. 통화 괜찮아요?"
     cop "하…… 다름이 아니고, 그 자전거 주인분 말이에요."
     cop "학생 나이도 어리고 초범이라 우리가 중간에서 선처 쪽으로 설득을 좀 해봤는데…… 주인이 완강하네. 화가 아주 많이 났어요."

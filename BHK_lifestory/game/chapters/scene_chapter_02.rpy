@@ -36,8 +36,9 @@ label scene_chapter_02:
 
     sys "그렇게 천호의 주선으로 마주하게 된 성수여고의 차서진."
 
-    show seojin normal at center with dissolve
-
+    show seojin happy at center with dissolve
+    
+    sj "안녕, 나는 성수여고 다니는 차서진이라고 해. 천호랑은 중학교 때부터 친구라서\n소개시켜준다고 해서 놀러왔어."
     sys "처음엔 그저 셋이 어울려 몇 번 떡볶이나 먹고 노래방이나 가던 사이였다."
     sys "하지만…… 사소한 장난에 웃는 모습, 툭툭 던지는 눈빛 하나에\n어느샌가 내 시선이 멎기 시작했다."
 
@@ -46,7 +47,7 @@ label scene_chapter_02:
     # ==============================================================================
     # 3. 우정과 사랑 사이: 천호를 밀어주기로 한 결심
     # ==============================================================================
-    scene bg alley_sunset with fade
+    scene bg backyard_sunset with fade
     window hide
 
     sys "하지만 그 달콤한 감정은 그리 오래가지 못했다."
@@ -54,10 +55,12 @@ label scene_chapter_02:
     show chunho serious at center with dissolve
     ch "……야. 나 서진이 진짜 진지하게 좋아하는 것 같다."
 
-    hide chunho with dissolve
+    
 
     sys "가장 밑바닥을 함께 지나왔고, 내 모든 찌질함을 알고도 곁을 지켜준 중학교 때부터의 절친."
     sys "천호 역시 서진이를 마음에 품고 있었다는 사실을 알게 된 순간,\n머릿속이 복잡하게 엉켜 들었다."
+
+    hide chunho with dissolve
 
     sys "‘내가 늦게 알았잖아.’\n‘천호와의 우정을 이런 일로 깨뜨릴 수는 없어.’"
 
@@ -72,24 +75,30 @@ label scene_chapter_02:
     window hide
 
     sys "어느 노을이 짙게 깔리던 늦은 오후."
-    sys "아무 생각 없이 동네 놀이터 삐걱거리는 그네에 앉아 발을 구르고 있었다."
+    sys "아무생각 없이 동네 놀이터 삐걱거리는 그네에 앉아 발을 구르고 있었다."
+    sys "아니 사실은 아무생각도 하고 싶지 않았다....{cps=20}\n하지만 머릿속은 온통 천호와 서진이로 가득 차 있었다."
 
     # 전화 진동음
-    # play sound "audio/sfx_phone_vibration.ogg"
+    play sound "audio/phone_ring.mp3"
+    $ renpy.pause(1.0)
+    scene bg park_call with dissolve
     $ renpy.pause(0.8)
-
     sys "주머니에서 울리는 휴대폰.\n화면에 뜬 이름은 다름 아닌 '차서진'이었다."
+    stop sound fadeout 0.5
 
+    play sound "audio/phone_pickup.mp3"
+    $renpy.pause(1.0)
+    me "여보세요?"
     me "어, 서진아. 웬일이야?"
     sj "그냥~ 심심해서 전화했지. 너 뭐 해?"
-    me "나 놀이터에서 그네 타는 중. 아, 맞다. 오늘 천호가 너 학원 끝나는 시간에 맞춰서 데리러 간다던데? 걔 진짜 착하지 않냐?"
+    me "나 놀이터에서 그네 타는 중인데?. 아, 맞다. 오늘 천호가 너 학원 끝나는 시간에 맞춰서 데리러 간다던데? 걔 진짜 착하지 않냐?"
 
     sys "습관처럼 또 천호 칭찬을 입에 올리며 말을 이어가려던 그 순간——"
 
     # ==============================================================================
     # 5. 서진의 기습 고백과 심리적 혼란
     # ==============================================================================
-    sj "……하아. 야, 이병연."
+    sj "……하아. 야, 김병연."
 
     # 음악 급정지 (적막)
     stop music
@@ -100,18 +109,17 @@ label scene_chapter_02:
     me "……어?"
     sj "나도 천호 멋있고 좋은 애인 거 알아. 근데……"
 
-    # 묵직한 서브 쿵 효과음과 함께 폰 화면 쪽으로 줌인
-    # play sound "audio/sfx_sub_bass_drop.ogg"
-    camera:
-        ease 0.3 zoom 1.35 xoffset -280 yoffset -180
-
-    sj "사실 나 너 좋아해."
-    sj "나랑 사귈래?"
+    sj "{size=+20}{cps=10}사실 나 너 좋아해."
+    sj "{size=+20}{cps=10}나랑 사귈래?"
 
     # 적막 속 화면 흔들림
+    camera:
+        ease 0.3 zoom 1.35 xoffset -280 yoffset -180
+    play sound "audio/boom.mp3"
     with vpunch
-    $ renpy.pause(0.5)
+    $ renpy.pause(1.0)
 
+    play music "audio/bgm_mystery.mp3" fadein 1.0
     sys "순간 심장이 덜컥 내려앉으며 얼굴이 터질 듯 달아올랐다."
     sys "머릿속이 하얘지다 못해 폭발할 것 같았다.\n기쁨보다 먼저 덮쳐온 것은 천호에 대한 거대한 죄책감과 당혹감이었다."
 
@@ -122,7 +130,7 @@ label scene_chapter_02:
 
         "필사적으로 밀어내며 천호를 언급한다.":
             me "너…… 너 지금 무슨 소리 하는 거야. 장난치지 마.\n천호가 너 얼마나 좋아하는지 알면서……!"
-            sj "장난 아니야. 천호가 날 좋아하는 거지, 내가 천호를 좋아하는 게 아니잖아."
+            sj "장난 아니야. 천호가 날 좋아하는 거지, 내가 천호를 좋아하는 게 아니잖아?"
 
         "당황해서 말을 더듬으며 선을 긋는다.":
             me "야, 차서진…… 잠깐만. 우리 셋이 친구잖아. 이러면 안 돼. 절대 안 돼……."
@@ -153,6 +161,8 @@ label scene_chapter_02:
 
     sys "그것이 훗날 나를 4.9등급이라는 처참한 나락으로 끌고 내려갈\n지독하고 위태로운 연애의 시작이라는 것도 모른 채."
 
+    stop music fadeout 1.5
+
     # ==============================================================================
     # 7. 비밀 연애, 그리고 불가피했던 들통
     # ==============================================================================
@@ -179,15 +189,15 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg highschool_classroom with fade
     window hide
-
+    play music "audio/bgm_sad.mp3" fadein 1.0
     sys "종례를 알리는 종소리가 울리자마자,\n나는 가방을 팽개치듯 메고 천호의 반으로 달려갔다."
-
-    show chunho serious at center with dissolve
-
     me "……천호야. 할 말 있어. 잠깐만 나와봐."
 
     # 싸늘한 정적과 함께 천호의 냉담한 대답
+    show chunho serious at center with dissolve
+    $ renpy.pause(0.5)
     ch "나 너랑 할 말 없는데."
+    ch "석식 먹으러 간다."
 
     hide chunho with dissolve
     sys "천호는 나를 쳐다보지도 않았다."
@@ -207,20 +217,19 @@ label scene_chapter_02:
     # 발소리 효과음
     # play sound "audio/sfx_footsteps_stairs.ogg"
 
+    show chunho serious at center with dissolve
     sys "얼마 지나지 않아, 식판을 비운 천호가 느릿느릿 계단을 밟고 내려왔다."
     sys "계단 밑에 서 있는 나를 발견한 천호의 미간이 찰나에 구겨졌고,\n그는 역시나 못 본 척 고개를 돌린 채 옆을 스쳐 지나가려 했다."
-
+    hide chunho with dissolve
     # 거칠게 팔을 낚아챔
     # play sound "audio/sfx_grab.ogg"
-    camera:
-        ease 0.15 zoom 1.25 xoffset 50 yoffset -30
 
     me "천호야, 진짜 잠깐만! 나 진짜 할 말 있어……!"
 
     # 팔을 거칠게 뿌리침
     with hpunch
     ch "이거 놓으라고, 씨발!"
-
+    show chunho angry at center with dissolve
     sys "극도의 배신감으로 이글거리는 천호의 눈동자."
     sys "뿌리쳐진 팔이 허공을 갈랐지만, 나는 물러설 수 없었다.\n여기서 놓치면 평생 천호의 얼굴을 보지 못할 거라는 본능적인 공포가 목을 죄었다."
 
@@ -236,7 +245,7 @@ label scene_chapter_02:
             me "나 너한테 거짓말하고 숨길 생각 없었어…… 제발 이야기라도 들어줘, 어?!"
 
         "바닥에 무릎이라도 꿇을 기세로 매달린다.":
-            me "{size=+4}야, 김천호! 너랑 나 중학교 때부터 어떻게 지냈는데……!{/size}"
+            me "{size=+4}야, 맹천호! 너랑 나 중학교 때부터 어떻게 지냈는데……!{/size}"
             me "나 진짜 개새끼 맞는데, 제발 딱 5분만 내 말 들어달라고!"
 
     # 천호의 발걸음이 멈춤
@@ -250,25 +259,28 @@ label scene_chapter_02:
     # ------------------------------------------------------------------------------
     # 사정을 털어놓고 눈물바다가 되는 순간
     # ------------------------------------------------------------------------------
-    scene bg school_backyard with fade
+    scene bg backyard_night with fade
     # play music "audio/bgm_sorrow_reconciliation.ogg" fadein 2.5
     window hide
 
     sys "본관 뒤편 으슥한 공터."
+    show chunho angry at center with dissolve
     sys "서진이가 그네 위에서 기습 고백을 했던 그날의 일부터,\n내가 천호를 밀어주려고 안간힘을 썼던 모든 사정을 밑바닥까지 전부 털어놓았다."
 
     me "나 진짜 너 밀어주려고 매일 서진이한테 네 칭찬만 했어……."
     me "근데 걔가…… 걔가 나 좋다고 우는데…… 나도 내가 개새끼인 거 아는데…… 미안하다, 진짜 미안하다 천호야……."
 
+    #hide chunho with dissolve
+    show chunho serious at center with dissolve
     sys "내 두서없는 고백이 끝났을 때,\n천호는 한참 동안 고개를 푹 숙인 채 말이 없었다."
 
     # 묵직한 서브 쿵 효과음
-    # play sound "audio/sfx_sub_thud.ogg"
+    #play sound "audio/sfx_sub_thud.ogg"
     $ renpy.pause(0.5)
 
     sys "그리고 이내——\n천호의 커다란 어깨가 거칠게 들썩이기 시작했다."
 
-    show chunho crying at center with dissolve
+    show chunho sad at center with dissolve
 
     ch "흐으윽…… 흑, 흐…… 으아아앙……!"
 
@@ -279,6 +291,8 @@ label scene_chapter_02:
     sys "나 역시 함께 울며 천호의 등을 두드렸고,\n그 지독한 눈물 속에서 우리는 서로의 응어리를 겨우 씻어내렸다."
 
     sys "그렇게…… 우리는 기적처럼 관계를 봉합하고 다시 둘도 없는 친구로 돌아왔다."
+
+    stop music fadeout 1.5
 
     # ==============================================================================
     # 10. 공개 연애와 마음가짐: 학생회 체육차장 면접의 비극
@@ -307,27 +321,18 @@ label scene_chapter_02:
     # ------------------------------------------------------------------------------
     # 체육부장 앞에서의 꽁냥거림, 그리고 탈락
     # ------------------------------------------------------------------------------
-    scene bg hallway_window with fade
+    scene bg highschool_hallway with fade
     window hide
 
     sys "그러나 면접을 불과 며칠 앞둔 어느 쉬는 시간."
     sys "복도 창가에서 서진이와 마주쳤고, 우리는 남들의 시선도 잊은 채 한껏 꽁냥거리고 있었다."
 
-    show seojin shy at center with dissolve
+    show seojin happy at center with dissolve
     sj "병연아~ 오늘 끝나고 어디 갈 거야? 응?"
     me "아, 끝나고? 맛있는 거 먹으러 가자. 히히."
-
-    # 싸늘한 시선 연출 (체육부장 등장)
-    show seojin shy at left
-    show pe_senior at right
-    with dissolve
-
     sys "그리고 그 꼴값을…… 복도 저편에서 지나가던 체육부장 선배가 싸늘한 눈으로 똑똑히 지켜보고 있었다."
-    pe_head "……."
 
-    hide seojin
-    hide pe_senior
-    with dissolve
+    hide seojin with dissolve
 
     sys "결과는 참담했다.\n면접실 문을 열고 들어가자마자 마주친 체육부장의 눈빛은 얼음장 같았다."
     sys "결국 나는 학생회 체육차장 최종 선발에서 어이없이 미끄러지고 말았다."
@@ -336,8 +341,8 @@ label scene_chapter_02:
     # ==============================================================================
     # 11. 시험 전날의 전화: "그깟 시험이 나보다 중요해?"
     # ==============================================================================
-    scene bg my_room_night with fade
-    # play music "audio/bgm_study_night.ogg" fadein 2.0
+    scene bg myroom with fade
+    play music "audio/bgm_dark.mp3" fadein 2.0
     window hide
 
     sys "학생회의 꿈이 박살 났지만 주저앉아 있을 시간은 없었다."
@@ -345,10 +350,14 @@ label scene_chapter_02:
     sys "기말고사를 하루 앞둔 밤, 나는 독서실 책상 앞에 앉아 밤을 새울 각오로 문제집을 파고들고 있었다."
 
     # 전화 벨소리
-    # play sound "audio/sfx_phone_ring.ogg"
-    $ renpy.pause(0.5)
-
+    play sound "audio/phone_ring.mp3"
+    $renpy.pause(1.0)
+    scene bg myroom_call with dissolve
+    $renpy.pause(0.8)
     sys "그 고요를 가르고 책상 위 휴대폰이 울렸다. 발신자는 서진이었다."
+    stop sound fadeout 0.5
+    play sound "audio/phone_pickup.mp3"
+    $renpy.pause(1.0)
 
     me "어, 서진아. 나 지금 내일 시험이라 독서실에서 막판 정리 중인데……."
     sj "……콜록! 흑, 병연아…… 나 지금 몸이 너무 아파…… 열도 엄청나고……."
@@ -364,6 +373,7 @@ label scene_chapter_02:
 
     # 서진의 멘헤라 폭주: BGM 정지 + 텍스트 붉어짐
     stop music
+    $ renpy.pause(1.0)
 
     sj "{size=+4}{color=#c0392b}……너 진짜 너무한다.{/color}{/size}"
     me "……어?"
@@ -371,7 +381,7 @@ label scene_chapter_02:
     # 카메라 줌인
     camera:
         ease 0.25 zoom 1.35 xoffset -280 yoffset -180
-
+    play sound "audio/boom.mp3"
     sj "{size=+6}{color=#c0392b}그깟 시험이 나보다 중요해?!{/color}{/size}"
     sj "내가 이렇게 아파서 죽어갈 것 같은데, 넌 그 빌어먹을 시험공부가 먼저야?!"
     sj "됐어. 넌 날 사랑하는 게 아니었어. 끊어!"
