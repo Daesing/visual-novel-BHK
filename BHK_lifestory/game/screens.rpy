@@ -297,6 +297,7 @@ screen navigation():
         if main_menu:
 
             textbutton _("시작하기") action Start()
+            textbutton _("챕터 선택") action ShowMenu("chapter_select")
 
         else:
 
@@ -1605,3 +1606,55 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+screen chapter_select():
+    tag menu
+
+    # 배경 어둡게 덮기 (또는 메인 배경 이미지 지정 가능)
+    add "#0d0d0d"
+
+    vbox:
+        align (0.5, 0.5)
+        spacing 25
+
+        text "CHAPTER SELECT" size 52 color "#ffffff" xalign 0.5 bold True
+
+        null height 20
+
+        # 각 버튼 클릭 시 해당 챕터의 label로 즉시 게임 시작
+        textbutton "CHAPTER 01 : 철없던 시절과 소년재판소":
+            xalign 0.5
+            text_size 32
+            text_idle_color "#cccccc"
+            text_hover_color "#e74c3c"
+            action Start("scene_chapter_01")
+
+        textbutton "CHAPTER 02 : 성수고 입학과 지독한 첫사랑":
+            xalign 0.5
+            text_size 32
+            text_idle_color "#cccccc"
+            text_hover_color "#e74c3c"
+            action Start("scene_chapter_02")
+
+        textbutton "CHAPTER 03 : 전설의 성수고 전교회장 자퇴빵":
+            xalign 0.5
+            text_size 32
+            text_idle_color "#cccccc"
+            text_hover_color "#e74c3c"
+            action Start("scene_chapter_04")
+
+        textbutton "CHAPTER FINAL : 전교회장 당선 및 엔딩":
+            xalign 0.5
+            text_size 32
+            text_idle_color "#cccccc"
+            text_hover_color "#e74c3c"
+            action Start("scene_chapter_04")
+
+        null height 30
+
+        textbutton "뒤로 가기":
+            xalign 0.5
+            text_size 26
+            text_idle_color "#888888"
+            text_hover_color "#ffffff"
+            action Return()

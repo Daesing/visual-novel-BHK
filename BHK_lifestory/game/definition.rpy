@@ -50,3 +50,4 @@ default stat_reputation = 50       # 교내 평판 수치
 default flag_bald = False          # 삭발 여부 플래그
 default flag_run_election = False  # 선거 출마 플래그
 default bike_choice = "" # 자전거 훔치기
+default phone_response = "honest"
