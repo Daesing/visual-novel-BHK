@@ -26,7 +26,7 @@ define sys = Character(None, italic=True, callback=play_typing_sound)
 define me = Character("병연", color="#4a90e2", callback=play_typing_sound)
 define ch = Character("천호", color="#50e3c2", callback=play_typing_sound)
 define sj = Character("차서진", color="#ff6b81", callback=play_typing_sound)
-define f1 = Character("옥현", color="#a4b0be", callback=play_typing_sound)
+define ok = Character("옥현", color="#a4b0be", callback=play_typing_sound)
 define yh = Character("용화", color="#eccc68", callback=play_typing_sound)
 define st = Character("승태", color="#ffa502", callback=play_typing_sound)
 define t_park = Character("선생님 박", color="#747d8c", callback=play_typing_sound)
@@ -40,7 +40,9 @@ define bad_kid_1 = Character("교육생 A", color="#7f8c8d", callback=play_typin
 define bad_kid_2 = Character("교육생 B", color="#95a5a6", callback=play_typing_sound)
 # 체육부장 선배
 define pe_head = Character("체육부장", color="#e67e22", callback=play_typing_sound)
+define teacher_council = Character("학생회 담당 교사", color="#2980b9", callback=play_typing_sound)
 define nvl_sys = Character(None, kind=nvl)
+
 
 # 전역 상태 변수
 default stat_determination = 0     # 독기 / 멘탈 스탯
