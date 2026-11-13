@@ -3,7 +3,6 @@ label scene_chapter_03:
     # ==============================================================================
     # 1. 엎질러진 물, 그리고 '학종'이라는 돌파구
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg highschool_classroom with fade
     play music "audio/bgm_school_life.ogg" fadein 2.0
@@ -30,7 +29,6 @@ label scene_chapter_03:
     # 2. 감투 독식: 반장, 국제부 초대부장, 봉사부장
     # ==============================================================================
     scene bg highschool_hallway with fade
-    window hide
 
     sys "학기 초 반장 선거, 망설임 없이 손을 들고 나가 반장 완장을 찼다."
 
@@ -47,7 +45,6 @@ label scene_chapter_03:
     # ==============================================================================
     scene bg teachers_office with fade
     # play music "audio/bgm_suspense_daily.ogg" fadeout 1.5 fadein 1.5
-    window hide
 
     sys "그러던 어느 날, 게시판에 붙은 공고문 하나가 시선을 사로잡았다.\n[[제2학기 학생회 임원 모집]."
     sys "순간 1학년 때 복도에서 꽁냥거리다 체육차장 면접에서 어이없이 미끄러졌던 굴욕이 떠올랐다."
@@ -82,7 +79,6 @@ label scene_chapter_03:
     # ==============================================================================
     scene bg highschool_classroom with fade
     # play music "audio/bgm_rage_awakening.ogg" fadein 2.0
-    window hide
 
     sys "하지만…… 포스트잇에 피를 토하듯 복수를 다짐했던 나에게,\n고작 그딴 이유로 멈춰 설 여유 따위는 없었다."
 
@@ -100,7 +96,6 @@ label scene_chapter_03:
     # 5. "너 야망이 있구나" — 면접 1등 합격
     # ==============================================================================
     scene bg teachers_office with fade
-    window hide
 
     sys "해 질 무렵, 잉크 냄새가 가시지 않은 A4 두 장을 들고 다시 교무실로 향했다."
 
@@ -119,7 +114,6 @@ label scene_chapter_03:
     # 면접 합격 연출
     scene bg highschool_hallway with fade
     # play music "audio/bgm_victory_rise.ogg" fadeout 1.5 fadein 1.5
-    window hide
 
     sys "그렇게 기적처럼 뚫어낸 면접 기회."
     sys "이미 4시간 동안 논리를 갈고닦은 내 앞에서 면접관들의 질문은 거칠 것이 없었다."
@@ -140,7 +134,6 @@ label scene_chapter_03:
     # ==============================================================================
     # 6. 1등 합격 이후의 질주, 그리고 다가온 전교회장 선거 시즌
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg highschool_classroom with fade
     play music "audio/bgm_school_life.ogg" fadein 2.0
@@ -154,7 +147,6 @@ label scene_chapter_03:
     # 7. 이미 짜여진 각본: 옥현과 용화의 단독 출마
     # ==============================================================================
     scene bg student_council_room with fade
-    window hide
 
     sys "성수고에는 암묵적인 불문율이 하나 있었다.\n매년 전교회장단은 학생회 내부에서 지명된 단독 후보가 무혈입성으로 당선된다는 것."
     sys "올해도 어김없었다.\n학생회의 '옥현'이 회장으로, 그리고 내 또 다른 절친인 '용화'가 부회장으로 세트를 이뤄 출마하는 구도."
@@ -192,7 +184,6 @@ label scene_chapter_03:
     # 박 선생님의 은밀한 제안
     # ------------------------------------------------------------------------------
     scene bg highschool_hallway with fade
-    window hide
 
     sys "옥현의 그 꼴불견 행태는 학생들뿐만 아니라 교사들의 눈에도 단단히 찍혀 있었다."
     sys "어느 날, 나를 국제부 초대 부장으로 이끌어주셨던 박 선생님이 복도 한구석으로 나를 불러 세웠다."
@@ -208,7 +199,6 @@ label scene_chapter_03:
     # 9. 베스트 프렌드 천호의 승부수, 그리고 전격 후보 등록
     # ==============================================================================
     scene bg rooftop_sunset with fade
-    window hide
 
     sys "그런데 그날 방과 후——\n초등학교부터 중학교, 고등학교까지 내 인생의 모든 밑바닥과 영광을 함께한 베스트 프렌드, 천호가 나를 옥상으로 불렀다."
 
@@ -248,7 +238,6 @@ label scene_chapter_03:
     # ------------------------------------------------------------------------------
     scene bg teachers_office with fade
     # play music "audio/bgm_rage_awakening.ogg" fadeout 1.0 fadein 1.5
-    window hide
 
     sys "결심이 서자 망설임은 사치였다.\n쇠뿔도 단김에 빼라고, 나는 다음 날 아침 1교시가 시작되기도 전에 교무실로 직행해 후보 등록 서류를 내리꽂았다."
 
@@ -258,7 +247,6 @@ label scene_chapter_03:
     # 10. 절친 용화의 비명: "이번 선거 지면 나 자퇴한다"
     # ==============================================================================
     scene bg highschool_hallway with fade
-    window hide
 
     sys "후보 등록 공고가 붙자마자 학교 전체가 발칵 뒤집혔다."
     sys "그리고 그 소식을 접한 부회장 경쟁 후보 용화는 하얗게 질린 얼굴로 나를 찾아왔다."
@@ -287,7 +275,6 @@ label scene_chapter_03:
     # ==============================================================================
     # 11. 핵심 카드 '승태'의 변심과 새벽의 전화
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg highschool_hallway with fade
     play music "audio/bgm_suspense_daily.ogg" fadein 2.0
@@ -299,7 +286,6 @@ label scene_chapter_03:
     sys "하지만…… 영원할 것 같던 그 균형은, 어이없는 균열 하나로 산산조각이 났다."
 
     scene bg my_room_night with fade
-    window hide
 
     sys "승태에게는 3학년 선배 중에 남몰래 진심으로 짝사랑하던 누나가 한 명 있었다."
     sys "그런데…… 용화가 뒤에서 그 누나를 험담하고 깠다는 소문이 승태의 귀에 들어가 버린 것이었다."
@@ -344,7 +330,6 @@ label scene_chapter_03:
     # ==============================================================================
     scene bg study_cafe_desk_night with fade
     # play music "audio/bgm_strategy_tension.ogg" fadein 2.0
-    window hide
 
     sys "이제는 감정이 아니라 철저한 전략으로 싸워야 할 때였다.\n나와 천호는 늦은 밤 책상 앞에 머리를 맞대고 1학년부터 3학년까지의 표심을 냉정하게 뜯어보았다."
 
@@ -373,7 +358,6 @@ label scene_chapter_03:
     # 13. 역발상의 섬광: 3학년 교실을 뒤집은 10초의 승부수
     # ==============================================================================
     scene bg highschool_classroom with fade
-    window hide
 
     sys "아무리 머리를 쥐어짜도 이 거대한 열세를 뒤집을 뾰족한 수가 떠오르지 않던 그때——"
     sys "복도 창너머로 3학년 교실 풍경을 바라보던 내 머릿속에, 번개처럼 하나의 생각이 스쳐 지나갔다."
@@ -396,7 +380,6 @@ label scene_chapter_03:
     # ------------------------------------------------------------------------------
     scene bg third_grade_classroom with fade
     stop music fadeout 1.0
-    window hide
 
     sys "다음 날, 본격적인 교실 유세가 시작되었다."
     sys "옥현과 용화 조는 기존 방식 그대로 3학년 교실 문을 열고 들어가\n우렁찬 목소리로 공약 종이를 읊어대며 선배들의 눈살을 찌푸리게 만들었다."
@@ -434,10 +417,9 @@ label scene_chapter_03:
     # 14. 운명의 날: 강당 전교회장 공약발표회 (오프닝으로 연결)
     # ==============================================================================
     scene bg auditorium_stage with fade
-    window hide
 
     sys "그렇게 피 말리는 유세 기간이 지나고——"
     sys "수많은 학생들의 자퇴와 자존심이 걸린 운명의 결승선,\n전교생이 모인 강당에서의 {size=+6}전교회장 공약발표일{/size}이 마침내 밝았다."
 
-    # 게임의 맨 처음 오프닝(프롤로그 강당 연설 씬)으로 자연스럽게 이어짐
-    jump scene_opening_speech
+    # 게임의 맨 처음 오프닝(프롤로그 강당 연설 씬)으로 이어짐 → script.rpy 에서 scene_final 호출
+    return

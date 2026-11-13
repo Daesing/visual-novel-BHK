@@ -3,7 +3,6 @@ label scene_chapter_02:
     # ==============================================================================
     # 1. 2년의 다짐, 그리고 성수고등학교 입학
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg highschool_gate with fade
     play music "audio/bgm_school_life.ogg" fadein 2.0
@@ -15,7 +14,6 @@ label scene_chapter_02:
     sys "어느덧 계절이 돌아 성수고등학교의 교복을 입게 되었다."
 
     scene bg highschool_classroom with fade
-    window hide
 
     sys "다시 시작된 학교생활."
     sys "중학교 시절의 어두운 그림자를 지우기 위해 성실하게 하루하루를 채워나갔다."
@@ -32,7 +30,6 @@ label scene_chapter_02:
 
     hide chunho with dissolve
     scene bg snack_bar with fade
-    window hide
 
     sys "그렇게 천호의 주선으로 마주하게 된 성수여고의 차서진."
 
@@ -48,7 +45,6 @@ label scene_chapter_02:
     # 3. 우정과 사랑 사이: 천호를 밀어주기로 한 결심
     # ==============================================================================
     scene bg backyard_sunset with fade
-    window hide
 
     sys "하지만 그 달콤한 감정은 그리 오래가지 못했다."
 
@@ -72,21 +68,20 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg park_sunset with fade
     # play music "audio/bgm_sunset_calm.ogg" fadeout 1.5 fadein 1.5
-    window hide
 
     sys "어느 노을이 짙게 깔리던 늦은 오후."
     sys "아무생각 없이 동네 놀이터 삐걱거리는 그네에 앉아 발을 구르고 있었다."
     sys "아니 사실은 아무생각도 하고 싶지 않았다....{cps=20}\n하지만 머릿속은 온통 천호와 서진이로 가득 차 있었다."
 
     # 전화 진동음
-    play sound "audio/phone_ring.mp3"
+    play sound "audio/phone_ring.ogg"
     $ renpy.pause(1.0)
     scene bg park_call with dissolve
     $ renpy.pause(0.8)
     sys "주머니에서 울리는 휴대폰.\n화면에 뜬 이름은 다름 아닌 '차서진'이었다."
     stop sound fadeout 0.5
 
-    play sound "audio/phone_pickup.mp3"
+    play sound "audio/phone_pickup.ogg"
     $renpy.pause(1.0)
     me "여보세요?"
     me "어, 서진아. 웬일이야?"
@@ -115,11 +110,11 @@ label scene_chapter_02:
     # 적막 속 화면 흔들림
     camera:
         ease 0.3 zoom 1.35 xoffset -280 yoffset -180
-    play sound "audio/boom.mp3"
+    play sound "audio/boom.ogg"
     with vpunch
     $ renpy.pause(1.0)
 
-    play music "audio/bgm_mystery.mp3" fadein 1.0
+    play music "audio/bgm_mystery.ogg" fadein 1.0
     sys "순간 심장이 덜컥 내려앉으며 얼굴이 터질 듯 달아올랐다."
     sys "머릿속이 하얘지다 못해 폭발할 것 같았다.\n기쁨보다 먼저 덮쳐온 것은 천호에 대한 거대한 죄책감과 당혹감이었다."
 
@@ -166,7 +161,6 @@ label scene_chapter_02:
     # ==============================================================================
     # 7. 비밀 연애, 그리고 불가피했던 들통
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg highschool_hallway with fade
     play music "audio/bgm_troubled_romance.ogg" fadein 2.0
@@ -188,8 +182,7 @@ label scene_chapter_02:
     # 8. 종례 후 교실, 그리고 차가운 투명인간 취급
     # ==============================================================================
     scene bg highschool_classroom with fade
-    window hide
-    play music "audio/bgm_sad.mp3" fadein 1.0
+    play music "audio/bgm_sad.ogg" fadein 1.0
     sys "종례를 알리는 종소리가 울리자마자,\n나는 가방을 팽개치듯 메고 천호의 반으로 달려갔다."
     me "……천호야. 할 말 있어. 잠깐만 나와봐."
 
@@ -208,7 +201,6 @@ label scene_chapter_02:
     # 9. 식당 계단 밑 대치와 눈물의 화해
     # ==============================================================================
     scene bg cafeteria_stairs with fade
-    window hide
 
     sys "사태의 심각성에 덜컥 심장이 내려앉았다."
     sys "밥이 목구멍으로 넘어갈 리 만무했지만, 나는 식당으로 뜀박질해 억지로 밥을 들이붓다시피 비우고는 식당 계단 밑 그늘진 구석에 버텨 서서 천호가 내려오기만을 기다렸다."
@@ -261,7 +253,6 @@ label scene_chapter_02:
     # ------------------------------------------------------------------------------
     scene bg backyard_night with fade
     # play music "audio/bgm_sorrow_reconciliation.ogg" fadein 2.5
-    window hide
 
     sys "본관 뒤편 으슥한 공터."
     show chunho angry at center with dissolve
@@ -299,7 +290,6 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg highschool_gate with fade
     # play music "audio/bgm_school_bright.ogg" fadein 2.0
-    window hide
 
     sys "천호와의 앙금을 털어내고 나자, 서진이와의 관계도 당당히 공개 연애로 전환되었다."
     sys "하지만 나는 지난날 보호관찰소에서의 뼈아픈 과거를 잊지 않고 있었다."
@@ -322,7 +312,6 @@ label scene_chapter_02:
     # 체육부장 앞에서의 꽁냥거림, 그리고 탈락
     # ------------------------------------------------------------------------------
     scene bg highschool_hallway with fade
-    window hide
 
     sys "그러나 면접을 불과 며칠 앞둔 어느 쉬는 시간."
     sys "복도 창가에서 서진이와 마주쳤고, 우리는 남들의 시선도 잊은 채 한껏 꽁냥거리고 있었다."
@@ -342,21 +331,20 @@ label scene_chapter_02:
     # 11. 시험 전날의 전화: "그깟 시험이 나보다 중요해?"
     # ==============================================================================
     scene bg myroom with fade
-    play music "audio/bgm_dark.mp3" fadein 2.0
-    window hide
+    play music "audio/bgm_dark.ogg" fadein 2.0
 
     sys "학생회의 꿈이 박살 났지만 주저앉아 있을 시간은 없었다."
     sys "‘그래, 학생회 떨어졌으면 내신 성적이라도 악착같이 챙기자.’"
     sys "기말고사를 하루 앞둔 밤, 나는 독서실 책상 앞에 앉아 밤을 새울 각오로 문제집을 파고들고 있었다."
 
     # 전화 벨소리
-    play sound "audio/phone_ring.mp3"
+    play sound "audio/phone_ring.ogg"
     $renpy.pause(1.0)
     scene bg myroom_call with dissolve
     $renpy.pause(0.8)
     sys "그 고요를 가르고 책상 위 휴대폰이 울렸다. 발신자는 서진이었다."
     stop sound fadeout 0.5
-    play sound "audio/phone_pickup.mp3"
+    play sound "audio/phone_pickup.ogg"
     $renpy.pause(1.0)
 
     me "어, 서진아. 나 지금 내일 시험이라 독서실에서 막판 정리 중인데……."
@@ -381,7 +369,7 @@ label scene_chapter_02:
     # 카메라 줌인
     camera:
         ease 0.25 zoom 1.35 xoffset -280 yoffset -180
-    play sound "audio/boom.mp3"
+    play sound "audio/boom.ogg"
     sj "{size=+6}{color=#c0392b}그깟 시험이 나보다 중요해?!{/color}{/size}"
     sj "내가 이렇게 아파서 죽어갈 것 같은데, 넌 그 빌어먹을 시험공부가 먼저야?!"
     sj "됐어. 넌 날 사랑하는 게 아니었어. 끊어!"
@@ -398,20 +386,17 @@ label scene_chapter_02:
     # 12. 밤샘 간호, 그리고 맞이한 4.9등급의 처참한 성적표
     # ==============================================================================
     scene bg pharmacy_night with fade
-    window hide
 
     sys "결국 이성은 감정의 억지를 이기지 못했다."
     sys "지갑을 털어 꼬깃꼬깃한 푼돈까지 긁어모아 심야 약국으로 달렸고,\n감기약과 해열제, 음료수를 한 보따리 사 들고 서진이의 집으로 향했다."
 
     scene bg seojin_room_night with fade
     # play music "audio/bgm_hopeless_night.ogg" fadein 2.0
-    window hide
 
     sys "밤새 물수건을 갈아주고, 약을 먹이고, 투정 어린 손을 잡아주며 뜬눈으로 밤을 지새웠다."
     sys "시곗바늘이 새벽 4시, 5시를 넘어갈 때마다\n머릿속에서 내일 풀어야 할 공식들이 모래알처럼 스르륵 빠져나가는 것이 느껴졌다."
 
     scene bg highschool_desk with fade
-    window hide
 
     sys "다음 날 아침."
     sys "세수도 제대로 하지 못한 퀭한 눈으로 시험장에 털썩 주저앉았다."
@@ -442,7 +427,6 @@ label scene_chapter_02:
     # ==============================================================================
     # 13. 중고 명품 거래와 위험한 용돈벌이
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg my_room_desk with fade
     play music "audio/bgm_suspense_daily.ogg" fadein 2.0
@@ -454,7 +438,6 @@ label scene_chapter_02:
     sys "덕분에 내 옷장에는 팔려 나가기를 기다리는 고가의 스톤아일랜드니, 톰브라운이니 하는 명품들이 수시로 걸려 있었다."
 
     scene bg highschool_hallway with fade
-    window hide
 
     sys "문제는…… 구매자가 나타나기 전까지 그 명품들을 내가 직접 입고 등교했다는 점이었다."
     sys "내 딴에는 '팔기 전에 잠깐 걸치는 옷'에 불과했지만,\n주변 친구들의 눈에는 매주 다른 명품을 휘감고 나타나는 '돈 많은 놈'으로 비쳤을 터였다."
@@ -465,7 +448,6 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg snack_bar_arirang with fade
     # play music "audio/bgm_sweet_sunset.ogg" fadeout 1.5 fadein 1.5
-    window hide
 
     sys "어느덧 서진이와도 계절을 함께하며 꽤나 돈독하고 깊은 사이가 되었을 무렵,\n내 생일이 찾아왔다."
 
@@ -503,7 +485,6 @@ label scene_chapter_02:
     sys "하지만…… 서진이는 내 생각보다 훨씬 뒤끝이 길고 독한 구석이 있었다."
 
     scene bg seojin_girls_highschool with fade
-    window hide
 
     sys "다음 날, 성수여고 교실 안."
     sys "아이들이 모여 앉은 자리에서 서진이의 입을 통해 흘러나온 이야기는\n내 의도와는 완전히 다른 괴물이 되어 있었다."
@@ -523,7 +504,6 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg highschool_hallway with fade
     # play music "audio/bgm_cold_drone.ogg" fadein 2.0
-    window hide
 
     sys "하지만 문제는…… 나 자신에게 있었다."
     sys "학교에 올 때마다 중고로 떼온 온갖 명품 옷을 번갈아 걸치고 다녔던 내 모습."
@@ -554,7 +534,6 @@ label scene_chapter_02:
     # ==============================================================================
     # 17. 삭발, 그리고 스터디카페에서의 처절한 칩거
     # ==============================================================================
-    window hide
     stop music fadeout 1.5
     scene bg barber_mirror with fade
     # play sound "audio/sfx_clipper_buzz.ogg"
@@ -568,7 +547,6 @@ label scene_chapter_02:
 
     scene bg study_cafe_desk with fade
     play music "audio/bgm_study_night.ogg" fadein 2.0
-    window hide
 
     sys "까까머리를 모자로 푹 눌러쓴 채, 매일같이 스터디카페로 출근 도장을 찍었다."
     sys "잡생각을 지우기 위해 펜을 쥐었고, 새벽 공기를 마시며 집으로 돌아오는 날들이 이어졌다."
@@ -586,7 +564,6 @@ label scene_chapter_02:
 
     scene bg front_house_night with fade
     stop music fadeout 1.5
-    window hide
 
     sys "가로등 불빛 아래 서서 기다린 지 얼마 지나지 않아,\n어둠을 가르고 택시 한 대가 집 앞 골목에 멈춰 섰다."
 
@@ -633,7 +610,6 @@ label scene_chapter_02:
     # ==============================================================================
     scene bg highschool_hallway with fade
     play music "audio/bgm_suspense_drone.ogg" fadein 2.0
-    window hide
 
     sys "이별 후 정확히 2주가 흘렀을 무렵."
     sys "교실 복도에서 내 귀를 의심케 하는 괴상한 소문이 돌기 시작했다."
@@ -678,7 +654,6 @@ label scene_chapter_02:
     # 20. 스터디카페의 포스트잇: MSG 0%의 분노와 각성
     # ==============================================================================
     scene bg study_cafe_desk_night with fade
-    window hide
 
     sys "눈이 뒤집힌 채로 발걸음이 향한 곳은 언제나처럼 그 삭막한 스터디카페였다."
     sys "가방을 던지듯 내려놓고, 핏발 선 눈으로 책상 앞에 주저앉았다."
@@ -693,7 +668,6 @@ label scene_chapter_02:
     # NVL 모드 전환: 피 끓는 독백과 원문 그대로의 포스트잇
     # ------------------------------------------------------------------------------
     nvl clear
-    window hide
     scene black with fade
     # play music "audio/bgm_rage_awakening.ogg" fadein 2.0
 
@@ -709,7 +683,6 @@ label scene_chapter_02:
     # 두 번째 통타, 그리고 괴물의 탄생
     # ------------------------------------------------------------------------------
     scene bg study_cafe_desk_night with fade
-    window hide
 
     sys "책상 위에 붙은 그 저주의 문장을 쏘아보며 거친 숨을 몰아쉬었다."
     sys "머리끝부터 발끝까지 주체할 수 없는 살의와 분노가 혈관을 타고 질주했다."
