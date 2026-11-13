@@ -361,7 +361,9 @@ label scene_chapter_02:
 
     # 서진의 멘헤라 폭주: BGM 정지 + 텍스트 붉어짐
     stop music
+    window hide
     $ renpy.pause(1.0)
+    
 
     sj "{size=+4}{color=#c0392b}……너 진짜 너무한다.{/color}{/size}"
     me "……어?"
@@ -428,7 +430,7 @@ label scene_chapter_02:
     # 13. 중고 명품 거래와 위험한 용돈벌이
     # ==============================================================================
     stop music fadeout 1.5
-    scene bg my_room_desk with fade
+    scene bg highend with fade
     play music "audio/bgm_suspense_daily.ogg" fadein 2.0
 
     sys "공부로 바닥을 기어 다니던 그 시절,\n내 손아귀를 채워주던 또 다른 은밀한 도파민이 있었다."
@@ -446,12 +448,12 @@ label scene_chapter_02:
     # ==============================================================================
     # 14. 다가온 생일, 꼼데가르송 농담과 아리랑 떡볶이
     # ==============================================================================
-    scene bg snack_bar_arirang with fade
-    # play music "audio/bgm_sweet_sunset.ogg" fadeout 1.5 fadein 1.5
+    scene bg highschool_hallway with fade
+    play music "audio/bgm_daily.mp3" fadein 1.5
 
     sys "어느덧 서진이와도 계절을 함께하며 꽤나 돈독하고 깊은 사이가 되었을 무렵,\n내 생일이 찾아왔다."
 
-    show seojin normal at center with dissolve
+    show seojin happy at center with dissolve
 
     sj "병연아, 곧 네 생일이잖아. 뭐 갖고 싶은 거 있어?"
     sj "일 년에 한 번뿐인데, 말해봐. 내가 사줄게."
