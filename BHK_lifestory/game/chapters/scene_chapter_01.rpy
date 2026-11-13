@@ -3,7 +3,6 @@ label scene_chapter_01:
     # 0. 2002년 춘천 병실로 회귀
     # ---------------------------------------------------------
     scene bg hospital with fade
-    window hide
 
     sys "2002년 9월 13일 가평 모 병원 병실"
 
@@ -19,7 +18,6 @@ label scene_chapter_01:
     # 1. 삼육초등학교 시절: 조용한 결핍과 엘리트 의식
     # ==============================================================================
     scene bg elementary_school with fade
-    window hide
 
     sys "춘천 삼육초등학교."
     sys "도내 유일의 사립 명문초라는 간판 아래,\n등굣길 교문 앞은 매일 아침 외제차와 정장 입은 학부모들로 붐볐다."
@@ -32,8 +30,7 @@ label scene_chapter_01:
     # 2. 가세의 기울어짐과 가출 투쟁: 일반중이라는 현실
     # ==============================================================================
     scene bg dark_house with fade
-    play music "bgm_dark.mp3" fadein 1.0
-    window hide
+    play music "audio/bgm_dark.ogg" fadein 1.0
     $ renpy.pause(1.0)
 
     sys "하지만 열세 살의 철부지가 미처 내다보지 못한 변수가 있었다."
@@ -50,7 +47,6 @@ label scene_chapter_01:
     
     
     scene bg street_night with fade
-    window hide
 
     sys "가출이었다."
     sys "추운 밤거리를 정처 없이 배회하며 온몸으로 반항하고 버텼지만,\n현실의 거대한 파도는 쥐뿔도 없는 중학생의 떼쟁이 투쟁 따위로 거스를 수 있는 게 아니었다."
@@ -64,7 +60,6 @@ label scene_chapter_01:
     # 3. 일반 중학교 진학: 오만과 고립, 그리고 천호
     # ==============================================================================
     scene bg middle_school_classroom with fade
-    window hide
 
     sys "나는 그 지긋지긋한 '일반 중학교'의 교문을 밟았다."
 
@@ -86,8 +81,7 @@ label scene_chapter_01:
     # 2. PC방의 쾌락과 타락 (나쁜 무리와의 접촉)
     # ==============================================================================
     scene bg pc_bang with fade
-    play music "audio/bgm_pcbang.mp3" fadein 1.0
-    window hide
+    play music "audio/bgm_pcbang.ogg" fadein 1.0
     $ renpy.pause(1.0)
 
     sys "초등학교 때까지만 해도 우리 집은 숨이 막힐 만큼 엄격했다."
@@ -105,7 +99,6 @@ label scene_chapter_01:
     # 3. 준호의 제안: 거절하지 못한 망보기
     # ==============================================================================
     scene bg bicycle with fade
-    window hide
 
     sys "해 질 무렵의 골목길."
     sys "준호가 상가 구석에 세워진 번쩍이는 자전거 한 대를 가리켰다.\n한눈에 봐도 족히 수십만 원은 넘어 보이는 고급 로드 바이크였다."
@@ -147,14 +140,13 @@ label scene_chapter_01:
     # 4. PC방에서의 전화, 그리고 검거
     # ==============================================================================
     scene bg pc_game with fade
-    play music "audio/bgm_pcbang.mp3" fadein 1.0
-    window hide
+    play music "audio/bgm_pcbang.ogg" fadein 1.0
 
     sys "훔친 자전거를 상가 뒤편에 대충 던져두고, 우리는 태연하게 PC방에 틀어박혔다."
     sys "헤드셋을 끼고 게임의 승패에 도파민을 터뜨리며,\n불과 30분 전의 죄책감 따위는 금세 잊혀가는 듯했다."
 
     # 전화 진동음
-    play sound "audio/phone_ring.mp3"
+    play sound "audio/phone_ring.ogg"
     $ renpy.pause(1.0)
     scene bg police_call with dissolve
 
@@ -172,7 +164,7 @@ label scene_chapter_01:
     cop "춘천경찰서 생활안전계 이 순경입니다."
     cop "지금 타고 다니는 자전거 본인 거 맞아요? 어디 있습니까?"
 
-    play sound "boom.mp3"
+    play sound "audio/boom.ogg"
     camera:
         ease 0.6 zoom 1.3 xoffset -700 yoffset -250
     
@@ -209,7 +201,6 @@ label scene_chapter_01:
     # 5. 경찰서 인계와 지장 날인
     # ==============================================================================
     scene bg police_station with fade
-    window hide
     
     sys "정신을 차렸을 땐 이미 파출소 의자에 앉아 있었다."
     cop "학생, 나이가 몇인데 남의 비싼 자전거에 손을 대?"
@@ -231,17 +222,16 @@ label scene_chapter_01:
 
     # 5. 끝나지 않은 악몽: 자전거 주인의 고소와 법원 소환장
     # ==============================================================================
-    play music "bgm_sad.mp3" fadein 1.0
+    play music "audio/bgm_sad.ogg" fadein 1.0
     scene bg room_night with fade
-    window hide
     
     # 전화벨 소리
-    play sound "audio/phone_ring.mp3"
+    play sound "audio/phone_ring.ogg"
     $ renpy.pause(2.0)
     
     sys "불과 며칠 뒤, 다시 울린 경찰서의 전화."
     stop sound fadeout 0.5  # 전화벨 효과음 종료
-    play sound "audio/phone_pickup.mp3"
+    play sound "audio/phone_pickup.ogg"
     $ renpy.pause(1.0)
     cop "병연 학생, 나 이 순경인데. 통화 괜찮아요?"
     cop "하…… 다름이 아니고, 그 자전거 주인분 말이에요."
@@ -260,7 +250,7 @@ label scene_chapter_01:
     scene black with Dissolve(0.5)
     $ renpy.pause(1.0)
 
-    play sound "boom.mp3"
+    play sound "audio/boom.ogg"
     scene bg court_summon with Dissolve(0.8)
     $ renpy.pause(0.5)
     sys "얼마 지나지 않아 집으로 날아든 하얀 우편 봉투 하나."
@@ -274,7 +264,6 @@ label scene_chapter_01:
     sys "작년까지만 해도 엘리트로 살던 내가 이 곳을 오게 될 줄은 꿈에도 몰랐다"
     # play music "audio/court_ambient.ogg" fadein 2.0
 
-    window hide
     scene bg courtroom with fade
     sys "차가운 공기, 양측 소송대리인의 딱딱하고 메마른 변론이 오가는 동안\n나는 고개를 처박은 채 내 숨소리조차 제대로 내지 못했다."
     # 판사의 발언
@@ -298,7 +287,6 @@ label scene_chapter_01:
     # ==============================================================================
     scene bg lecture_room with fade
     # stop music fadeout 1.5
-    window hide
 
     sys "그렇게 찾아가게 된 소년보호 교육센터."
     sys "무겁고 음침한 공기가 가득 찬 강의실 문을 열고 들어온 담당 강사는\n예상과 달리 넉살 좋은 미소를 띤 '임 선생'이었다."
@@ -309,7 +297,7 @@ label scene_chapter_01:
     sys "임 선생이 교탁의 오디오 버튼을 눌렀다."
 
     # 음악 재생 연출 (임재범 - 비상)
-    play music "audio/bisang.mp3" fadein 2.0
+    play music "audio/bisang.ogg" fadein 2.0
     $ renpy.pause(1.2)
 
     sys "스피커에서 흘러나온 노래는 임재범의 '비상(飛翔)'이었다."
@@ -347,7 +335,6 @@ label scene_chapter_01:
     # 정적 연출
     # stop music fadeout 0.8
     scene black with Dissolve(0.6)
-    window hide
 
     $ renpy.pause(0.8)
 
