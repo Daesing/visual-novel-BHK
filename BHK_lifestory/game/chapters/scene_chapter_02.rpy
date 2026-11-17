@@ -74,6 +74,7 @@ label scene_chapter_02:
     sys "아니 사실은 아무생각도 하고 싶지 않았다....{cps=20}\n하지만 머릿속은 온통 천호와 서진이로 가득 차 있었다."
 
     # 전화 진동음
+    window hide
     play sound "audio/phone_ring.ogg"
     $ renpy.pause(1.0)
     scene bg park_call with dissolve

@@ -1641,14 +1641,23 @@ screen chapter_select():
             text_size 32
             text_idle_color "#cccccc"
             text_hover_color "#e74c3c"
-            action Start("scene_chapter_04")
+            action Start("scene_chapter_03")
 
         textbutton "CHAPTER FINAL : 전교회장 당선 및 엔딩":
             xalign 0.5
             text_size 32
             text_idle_color "#cccccc"
             text_hover_color "#e74c3c"
-            action Start("scene_chapter_04")
+            action Start("scene_final")
+
+        # [방법 A] 4개 모두 깼을 때만 아예 버튼이 새로 나타나는 방식 (서프라이즈 연출 추천)
+        if persistent.clear:
+            textbutton "CHAPTER HIDDEN : 잊을 수 없는 그 날의 기억":
+                xalign 0.5
+                text_size 32
+                text_idle_color "#cccccc"
+                text_hover_color "#e74c3c"
+                action Start("scene_hidden_chapter")
 
         null height 30
 

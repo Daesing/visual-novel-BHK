@@ -49,3 +49,4 @@ define teacher_council = Character("학생회 담당 교사", color="#2980b9")
 
 # 전역 상태 변수
 default bike_choice = ""  # 1장 자전거 사건 경찰 통화 응답 ("honest" / "lie")
+default persistent.clear = False

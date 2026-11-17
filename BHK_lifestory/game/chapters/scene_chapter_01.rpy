@@ -146,9 +146,11 @@ label scene_chapter_01:
     sys "헤드셋을 끼고 게임의 승패에 도파민을 터뜨리며,\n불과 30분 전의 죄책감 따위는 금세 잊혀가는 듯했다."
 
     # 전화 진동음
+    window hide
     play sound "audio/phone_ring.ogg"
     $ renpy.pause(1.0)
     scene bg police_call with dissolve
+    $ renpy.pause(1.0)
 
     sys "요란하게 울리는 휴대폰 화면.\n발신자는 알 수 없는 번호였다."
     stop sound fadeout 0.5
@@ -166,7 +168,7 @@ label scene_chapter_01:
 
     play sound "audio/boom.ogg"
     camera:
-        ease 0.6 zoom 1.3 xoffset -700 yoffset -250
+        ease 0.6 zoom 1.3 xoffset -500 yoffset -300
     
 
     menu:
