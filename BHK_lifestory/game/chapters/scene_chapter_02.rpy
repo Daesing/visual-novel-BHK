@@ -331,7 +331,7 @@ label scene_chapter_02:
     # ==============================================================================
     # 11. 시험 전날의 전화: "그깟 시험이 나보다 중요해?"
     # ==============================================================================
-    scene bg myroom with fade
+    scene bg study_cafe_desk_night_01 with fade
     play music "audio/bgm_dark.ogg" fadein 2.0
 
     sys "학생회의 꿈이 박살 났지만 주저앉아 있을 시간은 없었다."
@@ -341,7 +341,7 @@ label scene_chapter_02:
     # 전화 벨소리
     play sound "audio/phone_ring.ogg"
     $renpy.pause(1.0)
-    scene bg myroom_call with dissolve
+    scene bg study_cafe_desk_02 with dissolve
     $renpy.pause(0.8)
     sys "그 고요를 가르고 책상 위 휴대폰이 울렸다. 발신자는 서진이었다."
     stop sound fadeout 0.5
@@ -487,7 +487,7 @@ label scene_chapter_02:
 
     sys "하지만…… 서진이는 내 생각보다 훨씬 뒤끝이 길고 독한 구석이 있었다."
 
-    scene bg seojin_girls_highschool with fade
+    scene bg highschool_classroom with fade
 
     sys "다음 날, 성수여고 교실 안."
     sys "아이들이 모여 앉은 자리에서 서진이의 입을 통해 흘러나온 이야기는\n내 의도와는 완전히 다른 괴물이 되어 있었다."
@@ -505,7 +505,7 @@ label scene_chapter_02:
     # ==============================================================================
     # 16. 명품 옷의 독, 그리고 바닥으로 곤두박질친 평판
     # ==============================================================================
-    scene bg highschool_hallway with fade
+    scene black with fade
     # play music "audio/bgm_cold_drone.ogg" fadein 2.0
 
     sys "하지만 문제는…… 나 자신에게 있었다."
@@ -538,8 +538,8 @@ label scene_chapter_02:
     # 17. 삭발, 그리고 스터디카페에서의 처절한 칩거
     # ==============================================================================
     stop music fadeout 1.5
-    scene bg barber_mirror with fade
-    # play sound "audio/sfx_clipper_buzz.ogg"
+    scene bg highschool_hallway with fade
+    play sound "audio/bgm_sad.ogg" fadein 1.0
 
     sys "명품 양아치라는 꼬리표, 복도마다 수군거리는 경멸 어린 시선들."
     sys "억울함에 피가 거꾸로 솟았지만, 변명할 힘조차 남아있지 않았다."
@@ -548,24 +548,27 @@ label scene_chapter_02:
     sys "그 알량한 자존심을 모조리 도려내듯, 나는 미용실 의자에 앉아 머리를 바짝 밀어버렸다."
     sys "바닥으로 후두둑 떨어져 내리는 머리카락과 함께,\n지난 1년간의 헛된 방황도 다 잘라내 버리겠노라 이를 악물었다."
 
-    scene bg study_cafe_desk with fade
-    play music "audio/bgm_study_night.ogg" fadein 2.0
-
+    scene bg study_cafe_desk_night with fade
     sys "까까머리를 모자로 푹 눌러쓴 채, 매일같이 스터디카페로 출근 도장을 찍었다."
     sys "잡생각을 지우기 위해 펜을 쥐었고, 새벽 공기를 마시며 집으로 돌아오는 날들이 이어졌다."
     sys "오직 성적으로 증명해내겠다는 오기 하나로 하루하루를 버티고 있었다."
+    sys "그러던 어느 늦은 밤, 서진이에게서 연락이 왔다."
 
     # ==============================================================================
     # 18. 집 앞의 택시, 서진의 위선적인 이별 통보
     # ==============================================================================
     # 전화 진동음
-    # play sound "audio/sfx_phone_vibration.ogg"
-    $ renpy.pause(0.5)
+    
+    scene bg alley_wait_01 with fade
+    #play sound "audio/phone_ring.ogg"
+    $ renpy.pause(2.0)
+    
+    sj "……병연아, 혹시 지금 집이야?"
+    sj "‘잠깐 볼 수 있어? 너희 집 앞으로 갈게.’"
 
-    sys "그러던 어느 늦은 밤, 서진이에게서 연락이 왔다."
-    sys "‘잠깐 볼 수 있어? 너희 집 앞으로 갈게.’"
+    sys "서진이의 말에 나는 잠시 망설였지만,\n결국 모자를 눌러쓴 채 집 앞 골목으로 나가 기다렸다."
 
-    scene bg front_house_night with fade
+    scene bg alley_wait_02 with dissolve
     stop music fadeout 1.5
 
     sys "가로등 불빛 아래 서서 기다린 지 얼마 지나지 않아,\n어둠을 가르고 택시 한 대가 집 앞 골목에 멈춰 섰다."
@@ -575,7 +578,7 @@ label scene_chapter_02:
 
     sys "조용히 문을 열고 내린 것은 서진이었다."
 
-    show seojin cold at center with dissolve
+    show seojin normal at center with dissolve
 
     sys "가로등 불빛을 등진 서진이의 얼굴은 전에 없이 굳어 있었고,\n공기 중에는 묘한 긴장감이 감돌았다."
 
@@ -611,11 +614,11 @@ label scene_chapter_02:
     # ==============================================================================
     # 19. 2주 뒤의 폭탄: 환승연애의 실체
     # ==============================================================================
-    scene bg highschool_hallway with fade
-    play music "audio/bgm_suspense_drone.ogg" fadein 2.0
+    scene bg bed_phone_01 with fade
+    play music "audio/bgm_mystery.ogg" fadein 1.0
 
     sys "이별 후 정확히 2주가 흘렀을 무렵."
-    sys "교실 복도에서 내 귀를 의심케 하는 괴상한 소문이 돌기 시작했다."
+    sys "내 귀를 의심케 하는 괴상한 소문이 돌기 시작했다."
 
     sys "‘야, 차서진 새 남친 생겼다던데?’\n‘헤어진 지 며칠이나 됐다고 벌써 딴 놈이랑 사귀냐?’"
 
@@ -628,14 +631,15 @@ label scene_chapter_02:
     # ------------------------------------------------------------------------------
     # BGM 칼정지 (적막)
     stop music
+    scene bg bed_phone_02
 
     sys "하지만…… 그 의리는 단 며칠 만에 산산조각이 났다."
     sys "친구들이 보여준 증거, 겹치는 지인들의 입을 통해 확인된 진실은 너무나 명백했다."
 
     # 묵직한 서브 쿵 효과음
-    # play sound "audio/sfx_sub_bass_drop.ogg"
+    play sound "audio/boom.ogg"
     camera:
-        ease 0.25 zoom 1.4 yoffset -50
+        ease 0.25 zoom 1.4 
 
     sys "{size=+6}환승연애.{/size}"
     sys "내가 머리를 밀고 스터디카페에서 썩어가는 동안,\n서진이는 이미 다른 놈과 다리를 걸쳐두고 있었던 것이었다."
@@ -656,7 +660,7 @@ label scene_chapter_02:
     # ==============================================================================
     # 20. 스터디카페의 포스트잇: MSG 0%의 분노와 각성
     # ==============================================================================
-    scene bg study_cafe_desk_night with fade
+    scene bg study_cafe_desk_01 with fade
 
     sys "눈이 뒤집힌 채로 발걸음이 향한 곳은 언제나처럼 그 삭막한 스터디카페였다."
     sys "가방을 던지듯 내려놓고, 핏발 선 눈으로 책상 앞에 주저앉았다."
@@ -674,25 +678,25 @@ label scene_chapter_02:
     scene black with fade
     # play music "audio/bgm_rage_awakening.ogg" fadein 2.0
 
-    nvl_sys "지금 내가 할 수 있는 것은 아무것도 없다."
-    nvl_sys "그저 내가 할 수 있는 유일한 복수는,\n좋은 대학에 가서 누구보다 성공한 삶을 사는 것뿐이다."
+    nvl_sys "{cps=15}지금 내가 할 수 있는 것은 아무것도 없다."
+    nvl_sys "{cps=15}그저 내가 할 수 있는 유일한 복수는,\n좋은 대학에 가서 누구보다 성공한 삶을 사는 것뿐."
 
     # 가장 거칠고 날것의 문장: 붉은색 강조 및 화면 흔들림
-    nvl_sys "{size=+8}{color=#c0392b}그리고 차서진 나쁜 씨발년.{/color}{/size}" with vpunch
+    nvl_sys "{cps=10}{size=+8}{color=#c0392b}차서진 나쁜 씨발X.{/color}{/size}" with vpunch
 
     nvl clear
 
     # ------------------------------------------------------------------------------
     # 두 번째 통타, 그리고 괴물의 탄생
     # ------------------------------------------------------------------------------
-    scene bg study_cafe_desk_night with fade
+    scene bg study_cafe_desk_03 with fade
 
     sys "책상 위에 붙은 그 저주의 문장을 쏘아보며 거친 숨을 몰아쉬었다."
     sys "머리끝부터 발끝까지 주체할 수 없는 살의와 분노가 혈관을 타고 질주했다."
 
     # 카메라 서서히 줌인 (눈빛 집중)
     camera:
-        ease 1.5 zoom 1.25 yoffset -40
+        ease 1.5 zoom 1.25
 
     sys "중학교 시절, 소년재판정의 차가운 바닥에서 첫 번째 둔기로 대가리를 얻어맞았다면——"
     sys "이날 스터디카페에서 확인한 진실은 내 영혼을 후려친 두 번째 해머였다."

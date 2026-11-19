@@ -137,7 +137,7 @@ label scene_final:
     sys "그리고 이후 전설의 전교회장 자퇴빵썰로 아직까지 회자되는 주인공이 되었다"
 
     # 3. 현재 시점 복귀 — 소주 한 잔과 회고 (엔딩)
-    scene bg modern_izakaya with fade
+    scene bg izakaya with fade
     # 잔 따르는 소리 등 잔잔한 BGM 전환 추천
     # play music "audio/ending_bgm.ogg" fadein 2.0
 
